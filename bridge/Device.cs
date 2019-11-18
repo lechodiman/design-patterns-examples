@@ -2,20 +2,12 @@
 
 namespace bridge
 {
-    public interface Device
+    public abstract class Device
     {
-        bool IsEnabled();
-        void Enable();
-        void Disable();
-        int GetVolume();
-        void SetVolume(int percent);
-        void PrintStatus();
-    }
+        protected bool On = false;
+        protected int Volume = 30;
 
-    public class Radio : Device
-    {
-        private bool On = false;
-        private int Volume = 30;
+        public abstract void PrintStatus();
 
         public void Disable()
         {
@@ -32,12 +24,26 @@ namespace bridge
             return Volume;
         }
 
+        public void SetVolume(int percent)
+        {
+            Volume = percent;
+        }
+
         public bool IsEnabled()
         {
             return On;
         }
+    }
 
-        public void PrintStatus()
+    public class Radio : Device
+    {
+        public Radio() : base()
+        {
+            On = false;
+            Volume = 30;
+        }
+
+        public override void PrintStatus()
         {
             Console.WriteLine("------------------------------------");
             Console.WriteLine("| I'm radio.");
@@ -45,39 +51,17 @@ namespace bridge
             Console.WriteLine("| Current volume is " + Volume + "%");
             Console.WriteLine("------------------------------------\n");
         }
-
-        public void SetVolume(int percent)
-        {
-            Volume = percent;
-        }
     }
 
     public class Tv : Device
     {
-        private bool On = false;
-        private int Volume = 30;
-
-        public void Disable()
+        public Tv() : base()
         {
             On = false;
+            Volume = 50;
         }
 
-        public void Enable()
-        {
-            On = true;
-        }
-
-        public int GetVolume()
-        {
-            return Volume;
-        }
-
-        public bool IsEnabled()
-        {
-            return On;
-        }
-
-        public void PrintStatus()
+        public override void PrintStatus()
         {
             Console.WriteLine("------------------------------------");
             Console.WriteLine("| I'm TV set.");
@@ -85,22 +69,5 @@ namespace bridge
             Console.WriteLine("| Current volume is " + Volume + "%");
             Console.WriteLine("------------------------------------\n");
         }
-
-        public void SetVolume(int percent)
-        {
-            if (Volume > 100)
-            {
-                Volume = 100;
-            }
-            else if (Volume < 0)
-            {
-                Volume = 0;
-            }
-            else
-            {
-                Volume = percent;
-            }
-        }
     }
-
 }
