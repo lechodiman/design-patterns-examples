@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "builder", "builder\builder.
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "factory-method", "factory-method\factory-method.csproj", "{5C9C19F2-89BF-40A9-A291-5FC79212048A}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "bridge", "bridge\bridge.csproj", "{034E1E45-ED0D-4B2F-8443-B1914239D203}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -58,5 +60,17 @@ Global
 		{5C9C19F2-89BF-40A9-A291-5FC79212048A}.Release|x64.Build.0 = Release|Any CPU
 		{5C9C19F2-89BF-40A9-A291-5FC79212048A}.Release|x86.ActiveCfg = Release|Any CPU
 		{5C9C19F2-89BF-40A9-A291-5FC79212048A}.Release|x86.Build.0 = Release|Any CPU
+		{034E1E45-ED0D-4B2F-8443-B1914239D203}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{034E1E45-ED0D-4B2F-8443-B1914239D203}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{034E1E45-ED0D-4B2F-8443-B1914239D203}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{034E1E45-ED0D-4B2F-8443-B1914239D203}.Debug|x64.Build.0 = Debug|Any CPU
+		{034E1E45-ED0D-4B2F-8443-B1914239D203}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{034E1E45-ED0D-4B2F-8443-B1914239D203}.Debug|x86.Build.0 = Debug|Any CPU
+		{034E1E45-ED0D-4B2F-8443-B1914239D203}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{034E1E45-ED0D-4B2F-8443-B1914239D203}.Release|Any CPU.Build.0 = Release|Any CPU
+		{034E1E45-ED0D-4B2F-8443-B1914239D203}.Release|x64.ActiveCfg = Release|Any CPU
+		{034E1E45-ED0D-4B2F-8443-B1914239D203}.Release|x64.Build.0 = Release|Any CPU
+		{034E1E45-ED0D-4B2F-8443-B1914239D203}.Release|x86.ActiveCfg = Release|Any CPU
+		{034E1E45-ED0D-4B2F-8443-B1914239D203}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
