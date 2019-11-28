@@ -48,10 +48,7 @@ namespace bridge
 
     public class AdvancedRemote : BasicRemote
     {
-        public AdvancedRemote(Device device) : base(device)
-        {
-
-        }
+        public AdvancedRemote(Device device) : base(device) { }
 
         public void Mute()
         {
