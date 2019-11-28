@@ -7,9 +7,9 @@ namespace bridge_pattern_1
         static void Main(string[] args)
         {
             var remoteA = new RemoteA();
-            var remoteB = new RemoteB();
-
             remoteA.ChannelDownButtonPressed();
+
+            var remoteB = new RemoteB();
             remoteB.ChannelUpButtonPressed();
 
             var remoteAPlus = new RemoteAPus(remoteA);
